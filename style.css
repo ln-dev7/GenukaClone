@@ -257,7 +257,9 @@ body {
 }
 
 .template-img {
-  width: 500px;
+  position: relative;
+  width: 530px;
+  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,10 +272,54 @@ body {
 }
 
 .template-img img {
-  border-radius: 10px;
-  overflow: hidden;
-  width: 400px;
+  position: absolute;
+  width: 295px;
   height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.template-img img:first-child {
+  left: 0;
+  top: 20px;
+  -webkit-animation: smove infinite alternate;
+          animation: smove infinite alternate;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+.template-img img:last-child {
+  right: 0;
+  top: -20px;
+  animation: smove infinite alternate-reverse;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes smove {
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@keyframes smove {
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
 }
 
 .template-container {
@@ -303,6 +349,7 @@ body {
 .template-container ul li span {
   font-size: 18px;
   font-weight: 500;
+  padding-left: 0.5rem;
 }
 
 .template-container button {
@@ -320,6 +367,227 @@ body {
 }
 
 .template-container button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #ffab02;
+}
+
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.dashboard .cards {
+  width: 80%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.dashboard-img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dashboard-img img:first-child {
+  width: 700px;
+  -webkit-animation: smove infinite alternate;
+          animation: smove infinite alternate;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+.dashboard-img img:last-child {
+  width: 535px;
+  position: absolute;
+  top: -30%;
+  z-index: -1;
+}
+
+@keyframes smove {
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+.dashboard-container {
+  width: 470px;
+}
+
+.dashboard-container h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.dashboard-container h2 {
+  font-size: 16px;
+  color: #aaaaaa;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.dashboard-container ul li {
+  padding: 0.4rem 0;
+}
+
+.dashboard-container ul li ion-icon {
+  color: #ffab02;
+}
+
+.dashboard-container ul li span {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 0.5rem;
+}
+
+.dashboard-container button {
+  border: 2px solid #ffab02;
+  border-radius: 50px;
+  font-weight: bold;
+  background: #ffab02;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+  -webkit-box-shadow: 2x 2px 5px #ffab02;
+          box-shadow: 2x 2px 5px #ffab02;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.dashboard-container button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #ffab02;
+}
+
+.work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.work .cards {
+  width: 80%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work-img {
+  width: 530px;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work-img img {
+  width: 295px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.work-container {
+  width: 700px;
+}
+
+.work-container h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.work-container h2 {
+  font-size: 16px;
+  color: #aaaaaa;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.work-container ul li {
+  padding: 0.4rem 0;
+}
+
+.work-container ul li ion-icon {
+  color: #ffab02;
+}
+
+.work-container ul li span {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 0.5rem;
+}
+
+.work-container button {
+  border: 2px solid #ffab02;
+  border-radius: 50px;
+  font-weight: bold;
+  background: #ffab02;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+  -webkit-box-shadow: 2x 2px 5px #ffab02;
+          box-shadow: 2x 2px 5px #ffab02;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.work-container button:hover {
   cursor: pointer;
   background: #fff;
   color: #ffab02;

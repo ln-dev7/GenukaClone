@@ -183,15 +183,39 @@ body {
     align-items: center;
   }
   &-img {
-    width: 500px;
+    position: relative;
+    width: 530px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
-      border-radius: 10px;
-      overflow: hidden;
-      width: 400px;
+      position: absolute;
+      width: 295px;
       height: 600px;
+      object-fit: cover;
+    }
+    img:first-child{
+        left: 0;
+        top: 20px;
+        animation: smove infinite alternate;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+    }
+    img:last-child{
+        right: 0;
+        top: -20px;
+        animation: smove infinite alternate-reverse;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+    }
+    @keyframes smove {
+        50%{
+            transform: translateY(30px);
+        }
+        100%{
+            transform: translateY(-30px);
+        }
     }
   }
   &-container {
@@ -208,13 +232,167 @@ body {
     }
     ul {
       li {
-          padding: 0.4rem 0;
+        padding: 0.4rem 0;
         ion-icon {
           color: green;
         }
         span {
           font-size: 18px;
           font-weight: 500;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+    button {
+      border: 2px solid $orange;
+      border-radius: 50px;
+      font-weight: bold;
+      background: $orange;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      margin-top: 1rem;
+      box-shadow: 2x 2px 5px $orange;
+      transition: 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        background: #fff;
+        color: $orange;
+      }
+    }
+  }
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  .cards {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &-img {
+      position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      object-fit: cover;
+    }
+    img:first-child{
+        width: 700px;
+        animation: smove infinite alternate;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+    }
+    img:last-child{
+        width: 535px;
+        position: absolute;
+        top: -30%;
+        z-index: -1;
+    }
+    @keyframes smove {
+        50%{
+            transform: translateY(30px);
+        }
+        100%{
+            transform: translateY(-30px);
+        }
+    }
+  }
+  &-container {
+    width: 470px;
+    h1 {
+      font-size: 34px;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 16px;
+      color: #aaaaaa;
+      font-weight: 500;
+      padding: 1rem 0;
+    }
+    ul {
+      li {
+        padding: 0.4rem 0;
+        ion-icon {
+          color: $orange;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 500;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+    button {
+      border: 2px solid $orange;
+      border-radius: 50px;
+      font-weight: bold;
+      background: $orange;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      margin-top: 1rem;
+      box-shadow: 2x 2px 5px $orange;
+      transition: 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        background: #fff;
+        color: $orange;
+      }
+    }
+  }
+}
+
+.work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  .cards {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-img {
+    width: 530px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 295px;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+  &-container {
+    width: 700px;
+    h1 {
+      font-size: 34px;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 16px;
+      color: #aaaaaa;
+      font-weight: 500;
+      padding: 1rem 0;
+    }
+    ul {
+      li {
+        padding: 0.4rem 0;
+        ion-icon {
+          color: $orange;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 500;
+          padding-left: 0.5rem;
         }
       }
     }
