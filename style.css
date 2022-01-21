@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-*, ::before, ::after {
+*,
+::before,
+::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  color: #000;
+  font-family: "Poppins", sans-serif;
+  color: #2b2350;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -21,5 +23,209 @@ li {
 
 body {
   background-color: #fff;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 30px #0000001a;
+          box-shadow: 0 1px 30px #0000001a;
+  z-index: 5;
+}
+
+.navigation .cards {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-left, .navigation-center, .navigation-right {
+  padding: 0.5rem 0;
+}
+
+.navigation-left li, .navigation-center li, .navigation-right li {
+  padding: 1rem;
+}
+
+.navigation-left li a, .navigation-center li a, .navigation-right li a {
+  font-weight: 500;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navigation-left li a:hover, .navigation-center li a:hover, .navigation-right li a:hover {
+  color: #ffab02;
+}
+
+.navigation button {
+  border: 2px solid #ffab02;
+  border-radius: 50px;
+  font-weight: bold;
+  color: #ffab02;
+  background: none;
+  padding: 0.5rem 1.5rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.navigation button:hover {
+  cursor: pointer;
+  background: #ffab02;
+  color: #fff;
+}
+
+.navigation-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-left img {
+  width: 150px;
+  height: 38px;
+}
+
+.navigation-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.header .cards {
+  width: 80%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-img img {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  height: 600px;
+}
+
+.header-container {
+  width: 570px;
+}
+
+.header-container h2,
+.header-container h3 {
+  font-size: 16px;
+}
+
+.header-container h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.header-container h2 {
+  color: #ffab02;
+  font-weight: 500;
+}
+
+.header-container h3 {
+  color: #919191;
+  padding: 1rem 0;
+}
+
+.header-container .input {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.header-container .input input {
+  width: 80%;
+  border: 2px solid #ffab02;
+  border-radius: 50px;
+  outline: none;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.header-container .input button {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  right: 0px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  background: #ffab02;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header-container .input button:hover {
+  cursor: pointer;
+  background: #ff5f15;
 }
 /*# sourceMappingURL=style.css.map */
