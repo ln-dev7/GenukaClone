@@ -228,4 +228,100 @@ body {
   cursor: pointer;
   background: #ff5f15;
 }
+
+.template {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.template .cards {
+  width: 80%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template-img {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template-img img {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  height: 600px;
+}
+
+.template-container {
+  width: 700px;
+}
+
+.template-container h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.template-container h2 {
+  font-size: 16px;
+  color: #aaaaaa;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.template-container ul li {
+  padding: 0.4rem 0;
+}
+
+.template-container ul li ion-icon {
+  color: green;
+}
+
+.template-container ul li span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.template-container button {
+  border: 2px solid #ffab02;
+  border-radius: 50px;
+  font-weight: bold;
+  background: #ffab02;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+  -webkit-box-shadow: 2x 2px 5px #ffab02;
+          box-shadow: 2x 2px 5px #ffab02;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.template-container button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #ffab02;
+}
 /*# sourceMappingURL=style.css.map */
